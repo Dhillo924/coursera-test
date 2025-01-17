@@ -1,10 +1,85 @@
+
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <html>
-    <meta charset="utf-8">
-    <title> !Hello Coursera</title>
-    <body>
-      <p>!<em><b>Hello Coursera</b>.It's a great Course</em>!.</p>
-    </body>
-  </html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+          padding: 10px; /* Horizontal spacing from the edges */
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .section {
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 10px;
+            position: relative;
+           background-color:gray;
+        }
+        .section-title {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color:light pink;
+            padding: 5px;
+          color: red;
+           border: 1px solid black;
+      }
+
+        /* Desktop view */
+        @media (min-width: 992px) {
+            .section {
+                width: 32%; /* Each section takes up 1/3 of the container */
+            }
+        }
+
+        /* Tablet view */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .section {
+                width: 48%; /* First two sections take up half the width */
+            }
+            .section:nth-child(3) {
+                width: 100%; /* Third section takes the full width */
+            }
+        }
+
+        /* Mobile view */
+        @media (max-width: 767px) {
+            .section {
+                width: 100%; /* Each section takes the full width */
+            }
+        }
+    </style>
 </head>
+<body>
+    <h1>Responsive Layout</h1>
+    <div class="container">
+        <div class="section">
+            <div class="section-title">Chicken</div>
+            <p>Chicken is an easy to make, popular Indian recipe that's guaranteed to be healthier ( and cheaper!) than at your favorite indian restaurant without scarificing taste!</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Beef</div>
+            <p>This Instant Pot Beef curry,sometimes called stew, is an easy beef recipe in which boneless beef stew meat is cooked alongside onions, yogurt,  and whole spices!</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Sushi</div>
+            <p>Sushi rolls can be filled with any ingredients you choose.Try smoked salmon instead of imitation crabmeat.Serve with teriyaki and wasabi!</p>
+        </div>
+    </div>
+</body>
+</html>
