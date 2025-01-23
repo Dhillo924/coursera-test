@@ -1,0 +1,15 @@
+<style>
+.dropdown-menu {
+    background-color: brown;
+    width: 100%;
+}
+.dropdown-menu li a{
+    color: #9dd640;
+}
+
+.tall-section {
+    height: 1000px;
+    background-color: #205d9b;
+    padding: 20px;
+}
+</style>
